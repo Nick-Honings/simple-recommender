@@ -11,7 +11,8 @@ data_config = {
 }
 
 # always_train= True|False -> whether to always train dataset on startup
-if __name__ == '__main__':
+def main(args):
+    title = args.get("title")
     recommender = SimpleRecommender(data_config)
     completion_event = threading.Event()
     print("Please wait a moment as I'm training myself")
@@ -21,17 +22,16 @@ if __name__ == '__main__':
     print("Training completed.")
     UIHelper.clear_console()
 
-    average_ratings = recommender.get_averages()
-    metadata = recommender.get_metadata()
-    video_game_title = input("What is your favourite video game: ")
+    # video_game_title = input("What is your favourite video game: ")
 
     # Todo: get_recommendations
-    raw_recommendations = recommender.get_recommendations(video_game_title).tolist()
+    raw_recommendations = recommender.get_recommendations(title).tolist()
     video_recommendation = recommender.construct_recommended_video_games(raw_recommendations)
     print("I found these products in my collection:")
     for video in video_recommendation:
         print(video)
 
+    return { "body": video}
 
 
 
