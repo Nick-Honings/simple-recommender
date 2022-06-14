@@ -2,7 +2,7 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
-dataset
+
 src/simple_recommender.py
 
 # User-specific stuff
@@ -214,7 +214,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-!/dataset/meta_Video_Games.json.gz
-!/dataset/Video_Games_k5_cluster.json.gz
-/dataset/
-!/dataset/
+/dataset
