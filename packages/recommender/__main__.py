@@ -1,4 +1,3 @@
-import sys
 import threading
 from simple_recommender import SimpleRecommender
 from helpers import UIHelper
@@ -10,9 +9,10 @@ data_config = {
     'metadata_model_path': '../models/metadata.pkl'
 }
 
+
 # always_train= True|False -> whether to always train dataset on startup
 def main(args):
-    # title = args.get("title")
+    title = args.get("title")
     recommender = SimpleRecommender(data_config)
     completion_event = threading.Event()
     print("Please wait a moment as I'm training myself")
@@ -31,11 +31,4 @@ def main(args):
     for video in video_recommendation:
         print(video)
 
-    # return { "body": video}
-
-
-if __name__ == '__main__':
-    main("")
-
-
-
+    return {"body": video_recommendation}

@@ -1,17 +1,5 @@
-targetNamespace: ''
-parameters: {}
 packages:
-  - name: src
-    environment: {}
-    parameters: {}
-    annotations: {}
+  - name: recommender
     actions:
-      - name: main
-        binary: false
-        main: ''
+      - name: recommender
         runtime: 'python:default'
-        web: true
-        parameters: {}
-        environment: {}
-        annotations: {}
-        limits: {}
