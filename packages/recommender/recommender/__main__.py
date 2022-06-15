@@ -3,8 +3,8 @@ from simple_recommender import SimpleRecommender
 from helpers import UIHelper
 
 data_config = {
-    'review_data_path': '../dataset/Video_Games_k5_cluster.json.gz',
-    'metadata_data_path': '../dataset/meta_Video_Games.json.gz',
+    'review_data_path': '../../../dataset/Video_Games_k5_cluster.json.gz',
+    'metadata_data_path': '../../../dataset/meta_Video_Games.json.gz',
     'review_model_path': '../models/average_product_rating_k5.pkl',
     'metadata_model_path': '../models/metadata.pkl'
 }
@@ -12,7 +12,7 @@ data_config = {
 
 # always_train= True|False -> whether to always train dataset on startup
 def main(args):
-    title = args.get("title")
+    #title = args.get("title")
     recommender = SimpleRecommender(data_config)
     completion_event = threading.Event()
     print("Please wait a moment as I'm training myself")
@@ -32,3 +32,7 @@ def main(args):
         print(video)
 
     return {"body": video_recommendation}
+
+
+if __name__ == "__main__":
+    main("None")

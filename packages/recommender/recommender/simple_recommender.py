@@ -50,7 +50,7 @@ class SimpleRecommender:
         if self.__metadata is None:
             print("Processing metadata file...")
 
-            self.__metadata = self.__load_data('metadata_data_path')[0:40000]  # Whole dataset is way too large.
+            self.__metadata = self.__load_data('metadata_data_path')[0:2000]  # Whole dataset is way too large.
             self.__metadata.to_pickle(self.__config['metadata_model_path'])
 
         if self.__averages is None:
