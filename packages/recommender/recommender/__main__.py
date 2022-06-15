@@ -5,8 +5,8 @@ from helpers import UIHelper
 data_config = {
     'review_data_path': '../../../dataset/Video_Games_k5_cluster.json.gz',
     'metadata_data_path': '../../../dataset/meta_Video_Games.json.gz',
-    'review_model_path': '../models/average_product_rating_k5.pkl',
-    'metadata_model_path': '../models/metadata.pkl'
+    'review_model_path': './models/average_product_rating_k5.pkl',
+    'metadata_model_path': './models/metadata.pkl'
 }
 
 
